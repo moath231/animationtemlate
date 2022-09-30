@@ -1,7 +1,7 @@
 :root {
-  --main-color: #19c8fa;
-  --sec-color: rgb(15 116 143 /70%);
-  --gloubl-padding: 100px;
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+  --main-padding: 100px;
 }
 
 * {
@@ -18,8 +18,218 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 268px) {
+  .container {
+    width: 394px;
+  }
+}
+@media (min-width: 540px) {
+  .container {
+    width: 530px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 730px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 945px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1165px;
+  }
+}
+header {
+  background-color: white;
+  -moz-box-shadow: 0 0 10px #ddd;
+  -webkit-box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 10px #ddd;
+}
+header .container {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  flex-wrap: wrap;
+}
+header .container .logo a {
+  align-items: center;
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 27px;
+  font-weight: 900;
+  text-transform: uppercase;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+}
+header .container ul {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header .container ul li a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #333;
+  padding: 0 30px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+header .container ul a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-color);
+  left: -100%;
+  top: 0;
+  transition: 0.4s;
+}
+header .container ul a:hover {
+  background-color: #eee;
+  color: var(--main-color);
+}
+header .container ul a:hover::before {
+  left: 0;
+}
+
+.landingpage {
+  position: relative;
+}
+.landingpage .container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  height: 90vh;
+}
+.landingpage .container .imag img {
+  width: 570px;
+  margin-bottom: 80px;
+  position: relative;
+  animation: up-and-down 5s linear infinite;
+}
+@media (max-width: 991px) {
+  .landingpage .container .imag img {
+    display: none;
+  }
+}
+.landingpage .container .text {
+  text-align: left;
+  flex: 1;
+}
+.landingpage .container .text h3 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+  letter-spacing: -2px;
+}
+.landingpage .container .text p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #777;
+  max-width: 500px;
+}
+@media (max-width: 991px) {
+  .landingpage .container .text {
+    text-align: center;
+  }
+  .landingpage .container .text p {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 539px) {
+  .landingpage .container .text {
+    text-align: center;
+  }
+  .landingpage .container .text h3 {
+    font-size: 35px;
+  }
+  .landingpage .container .text p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .landingpage .container {
+    height: 80vh;
+  }
+}
+.landingpage .arrow i {
+  color: var(--main-color);
+  font-size: 26px;
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  animation: bouncing 1.5s infinite;
+}
+@media (max-width: 991px) {
+  .landingpage .arrow i {
+    bottom: 0px;
+  }
+}
+
+.landingpage::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #eee;
+  z-index: -1;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+@keyframes up-and-down {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+@keyframes bouncing {
+  0%, 10%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(-15px);
+  }
 }/*# sourceMappingURL=style.css.map */
