@@ -1,0 +1,96 @@
+.Team-Members {
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+
+    .box {
+      position: relative;
+
+      .data {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 45px;
+
+        img {
+          max-width: calc(100% - 60px);
+          border-radius: 10px;
+          transition: 0.5s;
+        }
+
+        .social {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          i {
+            margin-bottom: 15px;
+            transition: 0.3s;
+          }
+
+          i:hover {
+            color: var(--main-color);
+          }
+        }
+      }
+
+      .info {
+        padding-left: 24%;
+        margin-top: 10px;
+        padding-bottom: 20px;
+
+
+        h2 {
+          color: var(--main-color);
+          font-size: 26px;
+          font-weight: 800;
+          text-transform: uppercase;
+        }
+
+        p {
+          color: #777;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .box::before {
+      content: "";
+      position: absolute;
+      width: 83%;
+      height: 100%;
+      top: 0px;
+      right: -5px;
+      background-color: #f3f3f3;
+      z-index: -2;
+      border-radius: 10px;
+    }
+
+    .box::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      top: 0px;
+      right: -5px;
+      background-color: #ddd;
+      z-index: -1;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .box:hover .data img {
+      filter: grayscale(100%);
+    }
+
+    .box:hover::after {
+      width: 83%;
+    }
+    .box:hover .info h2{
+      transition-delay: 0.3s;
+      color: #fff;
+    }
+  }
+}

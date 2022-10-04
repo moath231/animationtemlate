@@ -1,0 +1,61 @@
+.Galary {
+  background-color: #eee;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+
+    .box {
+      background-color: white;
+      padding: 15px;
+      box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+
+      .imag {
+        position: relative;
+        overflow: hidden;
+
+        img {
+          max-width: 100%;
+          transition: 0.3s;
+        }
+
+      }
+
+      .imag:hover img {
+        transform: rotate(3deg) scale(1.2);
+      }
+
+      .imag::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: hsla(0, 0%, 100%, 0.39);
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+      }
+
+      .imag:hover::after {
+        animation: flashing 0.4s;
+      }
+    }
+  }
+}
+
+
+@keyframes flashing {
+
+  0%,
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}

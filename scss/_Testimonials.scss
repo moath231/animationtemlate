@@ -1,0 +1,55 @@
+.Testimonials {
+  background-color: #ececec;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+
+    .box {
+      position: relative;
+      background-color: white;
+      padding: 20px;
+
+      img {
+        max-width: 30%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        border-radius: 50%;
+        right: -8px;
+        top: -40px;
+        padding: 8px;
+        background-color: #ececec;
+      }
+
+      //
+      .rating {
+        margin-bottom: 21px;
+
+        i:not(:last-child) {
+          color: gold;
+        }
+      }
+
+      //
+      .text {
+        h3 {
+          margin-bottom: 15px;
+          text-transform: capitalize;
+        }
+
+        h4 {
+          color: #777;
+          margin-bottom: 10px;
+          font-size: 15px;
+        }
+
+        p {
+          color: #777;
+        }
+
+      }
+    }
+  }
+}

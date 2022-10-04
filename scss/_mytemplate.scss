@@ -2,6 +2,13 @@
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
   --main-padding: 100px;
+
+}
+$mainpadding: 100px;
+
+.p-t-b-100{
+  padding-top: $mainpadding;
+  padding-bottom: $mainpadding;
 }
 
 * {
@@ -17,9 +24,11 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
 }
-a{
+
+a {
   text-decoration: none;
 }
+
 ul {
   list-style: none;
   padding: 0;
@@ -32,10 +41,91 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
-h1,h2,h3,h4,h5,h6,p{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   padding: 0;
   margin: 0;
 }
+
+.main-title {
+  margin: 100px auto;
+  border: 3px solid;
+  padding: 10px 20px;
+  width: fit-content;
+  font-size: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.main-title::before,
+.main-title::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-color: var(--main-color);
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-title::before {
+  left: -30px;
+}
+
+.main-title::after {
+  right: -30px;
+}
+
+.main-title:hover {
+  color: white;
+  border-color: var(--main-color);
+  transition-delay: 0.5s;
+}
+
+.main-title:hover::before {
+  z-index: -1;
+  animation: leftmove 0.5s linear forwards;
+}
+
+.main-title:hover::after {
+  z-index: -1;
+  animation: rightmove 0.5s linear forwards;
+}
+
+@keyframes leftmove {
+  50% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 55%;
+    height: 100%;
+  }
+}
+
+@keyframes rightmove {
+  50% {
+    right: 0;
+  }
+
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 55%;
+    height: 100%;
+  }
+}
+
+
 
 @media (min-width: 268px) {
   .container {
