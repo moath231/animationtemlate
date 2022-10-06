@@ -4,9 +4,10 @@
   --main-padding: 100px;
 
 }
+
 $mainpadding: 100px;
 
-.p-t-b-100{
+.p-t-b-100 {
   padding-top: $mainpadding;
   padding-bottom: $mainpadding;
 }
@@ -35,8 +36,6 @@ ul {
   margin: 0;
 }
 
-
-
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -55,6 +54,9 @@ p {
   margin: 0;
 }
 
+
+//
+//
 .main-title {
   margin: 100px auto;
   border: 3px solid;
@@ -127,7 +129,48 @@ p {
   }
 }
 
+//
 
+
+//
+.dots {
+  background-image: url("../image/dots.png");
+  width: 210px;
+  height: 200px;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 0;
+}
+
+.up-dot {
+  right: 0px;
+  top: 100px;
+}
+
+.down-dot {
+  bottom: 100px;
+  left: 0px;
+}
+
+//
+
+//
+.spick {
+  position: relative;
+}
+
+.spick::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+  top: 0;
+}
+
+//
 
 @media (min-width: 268px) {
   .container {

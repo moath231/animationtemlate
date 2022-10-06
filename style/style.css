@@ -119,6 +119,40 @@ p {
     height: 100%;
   }
 }
+.dots {
+  background-image: url("../image/dots.png");
+  width: 210px;
+  height: 200px;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 0;
+}
+
+.up-dot {
+  right: 0px;
+  top: 100px;
+}
+
+.down-dot {
+  bottom: 100px;
+  left: 0px;
+}
+
+.spick {
+  position: relative;
+}
+
+.spick::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+  top: 0;
+}
+
 @media (min-width: 268px) {
   .container {
     width: 394px;
@@ -443,6 +477,7 @@ header .container .other-link:hover .mega-link {
 }
 .Galary {
   background-color: #eee;
+  position: relative;
 }
 .Galary .container {
   display: grid;
@@ -745,6 +780,7 @@ header .container .other-link:hover .mega-link {
 
 .Services {
   background-color: #ececec;
+  position: relative;
 }
 .Services .container {
   display: grid;
@@ -951,6 +987,9 @@ header .container .other-link:hover .mega-link {
   }
 }
 
+.Latest-Events {
+  position: relative;
+}
 .Latest-Events .container {
   display: flex;
   flex-wrap: wrap;
