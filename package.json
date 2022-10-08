@@ -1,0 +1,19 @@
+{
+  "name": "animationtemplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moath231/animationtemlate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moath231/animationtemlate/issues"
+  },
+  "homepage": "https://github.com/moath231/animationtemlate#readme"
+}
