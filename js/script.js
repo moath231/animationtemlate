@@ -83,7 +83,7 @@ let start = false;
 window.onscroll = function () {
 
   // ** Stats
-  if(window.scrollY >= (Stats.offsetTop - 100)){
+  if(window.scrollY >= (Stats.offsetTop - 200)){
     if(!start){
       numbers.forEach((n) => startcount(n));
     }
