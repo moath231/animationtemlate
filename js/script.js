@@ -81,7 +81,7 @@ let numbers = document.querySelectorAll(".Stats .box span"); //! Stats section
 let start = false;
 
 window.onscroll = function () {
-
+  console.log(Stats.offsetTop - 2500);
   // ** Stats
   if(window.scrollY >= (Stats.offsetTop - 200)){
     if(!start){
