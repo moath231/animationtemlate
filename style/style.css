@@ -153,6 +153,36 @@ p {
   top: 0;
 }
 
+.up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 16px 0px #777;
+  z-index: 999;
+}
+.up i {
+  background-color: var(--main-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.up:hover {
+  animation: up 0.6s linear infinite;
+}
+
+@keyframes up {
+  100% {
+    transform: translateY(-6px);
+  }
+}
 @media (min-width: 268px) {
   .container {
     width: 394px;
@@ -524,6 +554,31 @@ header .container .other-link:hover .mega-link {
     height: 200%;
   }
 }
+.overlay-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.808);
+  z-index: 9999;
+}
+
+.popup-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 99999;
+}
+.popup-box img {
+  max-width: 100%;
+}
+
 .Features .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -728,6 +783,9 @@ header .container .other-link:hover .mega-link {
 .Team-Members .container .box .data .social i:hover {
   color: var(--main-color);
 }
+.Team-Members .container .box .data .social .fa-youtube:hover {
+  color: red;
+}
 .Team-Members .container .box .info {
   padding-left: 24%;
   margin-top: 10px;
@@ -775,6 +833,9 @@ header .container .other-link:hover .mega-link {
 .Team-Members .container .box:hover .info h2 {
   transition-delay: 0.2s;
   color: #333;
+}
+.Team-Members .container .box:hover i {
+  font-size: 23px;
 }
 
 .Services {
