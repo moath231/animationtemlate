@@ -42,6 +42,9 @@
             position: absolute;
             height: 100%;
             background-color: var(--main-color);
+            transition: all 2.5s;
+            width: 0;
+            transition-timing-function: ease-in-out;
           }
 
           span::after {

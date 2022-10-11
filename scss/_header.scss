@@ -130,7 +130,12 @@ header {
       }
     }
 
-    .other-link:hover .mega-link {
+    // .other-link:hover .mega-link {
+    //   z-index: 100;
+    //   opacity: 1;
+    //   top: 100%;
+    // }
+    .active{
       z-index: 100;
       opacity: 1;
       top: 100%;

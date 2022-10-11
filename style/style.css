@@ -318,7 +318,7 @@ header .container .mega-link .links li:not(:last-child) {
     display: none;
   }
 }
-header .container .other-link:hover .mega-link {
+header .container .active {
   z-index: 100;
   opacity: 1;
   top: 100%;
@@ -962,6 +962,9 @@ header .container .other-link:hover .mega-link {
   position: absolute;
   height: 100%;
   background-color: var(--main-color);
+  transition: all 2.5s;
+  width: 0;
+  transition-timing-function: ease-in-out;
 }
 .Our-Skills .container .stat .skill .the-progress span::after {
   content: attr(data-width);
@@ -1409,4 +1412,82 @@ header .container .other-link:hover .mega-link {
   100% {
     transform: rotate(-360deg);
   }
+}
+footer {
+  background-color: #191919;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  color: white;
+  gap: 35px;
+}
+footer .container .sosial h3 {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+footer .container .sosial .fty {
+  margin-bottom: 25px;
+}
+footer .container .sosial .fty i {
+  font-size: 25px;
+  padding: 12px;
+  background: #313131;
+}
+footer .container .sosial .fty .fa-facebook:hover {
+  background-color: #4267B2;
+}
+footer .container .sosial .fty .fa-youtube:hover {
+  background-color: #FF0000;
+}
+footer .container .sosial .fty .fa-twitter:hover {
+  background-color: #1DA1F2;
+}
+footer .container .sosial p {
+  line-height: 1.7;
+  color: #b9b9b9;
+}
+footer .container .links ul li {
+  padding: 15px 0;
+  transition: 0.5s;
+}
+footer .container .links ul li a {
+  color: #b9b9b9;
+}
+footer .container .links ul li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f101";
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--main-color);
+}
+footer .container .links ul li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+footer .container .links ul li:hover {
+  padding-left: 15px;
+}
+footer .container .address {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .address .add {
+  display: flex;
+  margin-bottom: 25px;
+}
+footer .container .address .add i {
+  margin-right: 15px;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--main-color);
+}
+footer .container .address .add p {
+  line-height: 1.7;
+  color: #b9b9b9;
+}
+footer .container .imag img {
+  width: 70px;
+  margin: 3px;
+  border: 2px solid white;
 }/*# sourceMappingURL=style.css.map */
